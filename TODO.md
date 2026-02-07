@@ -6,11 +6,11 @@ Before submitting your Lab 3 assignment, ensure that **all items below are compl
 
 ## 🔹 Repository and Branching
 
-* [ ] The repository is correctly created on GitHub.
-* [ ] All work is committed to **exactly one branch** named
+* [x] The repository is correctly created on GitHub.
+* [x] All work is committed to **exactly one branch** named
   `firstname_U20230xxx`.
-* [ ] **No work is pushed to `master`**.
-* [ ] The correct branch is pushed to GitHub.
+* [x] **No work is pushed to `master`**.
+* [x] The correct branch is pushed to GitHub.
 
 ---
 
