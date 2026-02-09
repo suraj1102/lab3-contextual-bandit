@@ -9,22 +9,29 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neural_network import MLPClassifier
 
-def preprocess(df, label_col="label"):
+def preprocess(df, label_col="label", test_size=0.2, val_size=0.25, random_state=42):
     X = df.drop(columns=[label_col])
     y = df[label_col]
 
     le = LabelEncoder()
     y_encoded = le.fit_transform(y)
 
-    return X, y_encoded, le
+    # Split into train and test sets
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y_encoded, test_size=test_size, random_state=random_state
+    )
+
+    return X_train, y_train, X_test, y_test, le
 
 def train_classifiers(X_train, y_train, X_val, y_val, random_state=42):
     models = {
-        "Logistic Regression": LogisticRegression(max_iter=1000),
-        "Random Forest": RandomForestClassifier(n_estimators=200),
+        "Logistic Regression": LogisticRegression(max_iter=10_000),
+        "Random Forest": RandomForestClassifier(n_estimators=100),
         "SVM (RBF)": SVC(kernel="rbf"),
-        "KNN": KNeighborsClassifier(n_neighbors=5)
+        "KNN": KNeighborsClassifier(n_neighbors=5),
+        "Neural Network": MLPClassifier(hidden_layer_sizes=(64, 32, 16), max_iter=10_000, random_state=random_state)
     }
 
     results = {}
