@@ -5,5 +5,7 @@ This project is part of the Reinforcement Learning Fundamentals course. It focus
 
 ## Project Structure
 - **`master.ipynb`**: The main notebook for the project, including data loading, preprocessing, and contextual bandit implementation.
-- **`classification.ipynb`**: Verification of the `classifiers.py` file and testing classification methods for users.
 - **`classifiers.py`**: Includes helper functions and classes for classification tasks.
+- **`bandit.py`**: Contains bandit base class called `MultiArmedBandit` which calls `rlcmab_sampler` to sample rewards.
+- **`agents.py`**: Contans all the agent base classes implements $\epsilon$-Greedy, Softmax, and UCB algorithms.
+- **`experiments.py`**: Functions to run multiple experiments and plot results.

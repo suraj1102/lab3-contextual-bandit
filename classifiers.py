@@ -30,7 +30,7 @@ def train_classifiers(X_train, y_train, X_val, y_val, random_state=42):
         "Logistic Regression": LogisticRegression(max_iter=10_000),
         "Random Forest": RandomForestClassifier(n_estimators=100),
         "SVM (RBF)": SVC(kernel="rbf"),
-        "KNN": KNeighborsClassifier(n_neighbors=5),
+        "KNN": KNeighborsClassifier(n_neighbors=3),
         "Neural Network": MLPClassifier(hidden_layer_sizes=(64, 32, 16), max_iter=10_000, random_state=random_state)
     }
 
@@ -43,3 +43,7 @@ def train_classifiers(X_train, y_train, X_val, y_val, random_state=42):
         results[name] = acc
 
     return results, models
+
+def classify_datapoint(model, X):
+    pred = model.predict(X)
+    return pred
