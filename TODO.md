@@ -16,30 +16,30 @@ Before submitting your Lab 3 assignment, ensure that **all items below are compl
 
 ## 🔹 Notebook Submission
 
-* [ ] Exactly **one** Jupyter Notebook (`.ipynb`) is submitted.
-* [ ] The notebook is placed at the **root of the repository**.
-* [ ] The notebook is named **exactly**:
+* [x] Exactly **one** Jupyter Notebook (`.ipynb`) is submitted.
+* [x] The notebook is placed at the **root of the repository**.
+* [x] The notebook is named **exactly**:
   `lab3_results_<roll_number>.ipynb`.
-* [ ] The notebook runs **top to bottom without errors**.
-* [ ] All outputs (plots, tables, metrics) are visible in the notebook.
+* [x] The notebook runs **top to bottom without errors**.
+* [x] All outputs (plots, tables, metrics) are visible in the notebook.
 
 ---
 
 ## 🔹 Sampler Usage
 
-* [ ] The provided `sampler` package is used **without modification**.
-* [ ] The sampler is initialized using your correct roll number `i`.
-* [ ] Rewards are obtained **only** via `sampler.sample(j)`.
-* [ ] No hard-coded or synthetic rewards are used.
+* [x] The provided `sampler` package is used **without modification**.
+* [x] The sampler is initialized using your correct roll number `i`.
+* [x] Rewards are obtained **only** via `sampler.sample(j)`.
+* [x] No hard-coded or synthetic rewards are used.
 
 ---
 
 ## 🔹 Contextual Bandit Implementation
 
-* [ ] User category is treated as the **context**.
-* [ ] News category is treated as the **bandit arm**.
-* [ ] The arm index mapping follows the specification in the lab handout.
-* [ ] All three algorithms are implemented:
+* [x] User category is treated as the **context**.
+* [x] News category is treated as the **bandit arm**.
+* [x] The arm index mapping follows the specification in the lab handout.
+* [x] All three algorithms are implemented:
 
   * Epsilon-Greedy
   * Upper Confidence Bound (UCB)
@@ -50,22 +50,22 @@ Before submitting your Lab 3 assignment, ensure that **all items below are compl
 ## 🔹 Evaluation and Plots
 
 * [ ] Classification accuracy is reported on `test_users.csv`.
-* [ ] Reinforcement learning simulation is run for **T = 10,000 steps**.
-* [ ] Plots include:
-
+  - No labels on `test_users.csv` so cannot perform this task.
+* [x] Reinforcement learning simulation is run for **T = 10,000 steps**.
+* [x] Plots include:
   * Average Reward vs. Time (per context)
   * Hyperparameter comparison plots
-* [ ] All plots have labeled axes, legends, and titles.
+* [x] All plots have labeled axes, legends, and titles.
 
 ---
 
 ## 🔹 README.md Requirements
 
-* [ ] README.md is present at the repository root.
-* [ ] It explains the overall approach and design decisions.
-* [ ] It summarizes key results and observations.
-* [ ] It includes clear instructions to reproduce the experiments.
-* [ ] All external references (if any) are properly cited.
+* [x] README.md is present at the repository root.
+* [x] It explains the overall approach and design decisions.
+* [x] It summarizes key results and observations.
+* [x] It includes clear instructions to reproduce the experiments.
+* [x] All external references (if any) are properly cited.
 
 ---
 

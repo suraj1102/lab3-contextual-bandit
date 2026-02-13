@@ -172,7 +172,6 @@ class UCBBanditAgent(BanditAgent):
             variance = c * np.sqrt(np.log(t) / N)
             variance[N == 0] = np.inf
 
-        print("variance:", variance)
     
         A_t = np.argmax(Q + variance)
         return A_t
